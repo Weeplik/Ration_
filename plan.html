@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="План питания на день: приёмы пищи, калории и БЖУ">
+  <title>План питания — Рацион</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="container header">
+    <a class="logo" href="index.html"><span class="logo__mark"></span>рацион</a>
+    <nav class="nav" aria-label="Основная навигация">
+      <ul>
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="catalog.html">Каталог</a></li>
+        <li><a href="plan.html" aria-current="page">План питания</a></li>
+        <li><a href="stats.html">Статистика</a></li>
+      </ul>
+    </nav>
+    <div class="header__actions"><a class="btn" href="login.html">Михаил Джэкич</a></div>
+  </header>
+
+  <main class="container">
+    <p class="eyebrow">План питания</p>
+    <h1>Ваш дневной рацион</h1>
+    <p class="muted">План питания на 14 сентября. Сбалансированные блюда, удобный формат и понятные цели для дня.</p>
+
+    <form class="date-nav" action="plan.html" method="get">
+      <button class="btn" type="submit" name="date" value="2026-09-13">← 13 сентября</button>
+      <div class="field"><label for="date" class="muted">Дата плана</label><input type="date" id="date" name="date" value="2026-09-14"></div>
+      <button class="btn" type="submit" name="date" value="today">Сегодня →</button>
+    </form>
+
+    <div class="two-col">
+      <section>
+        <article class="card">
+          <p class="eyebrow">Рацион на день</p>
+          <h2>Рацион на день</h2>
+          <p class="muted">Три основных приёма пищи и быстрый способ добавить новое блюдо.</p>
+          <div class="meal"><div><p class="muted">Завтрак · 08:30</p><strong>Овсянка с ягодами</strong><p class="muted">Запланировано на день</p></div><p class="meal__kcal">350<br><small class="muted">ккал</small></p></div>
+          <div class="meal"><div><p class="muted">Обед · 13:00</p><strong>Курица с овощами</strong><p class="muted">Запланировано на день</p></div><p class="meal__kcal">520<br><small class="muted">ккал</small></p></div>
+          <div class="meal"><div><p class="muted">Ужин · 19:00</p><strong>Рыба с рисом</strong><p class="muted">Запланировано на день</p></div><p class="meal__kcal">480<br><small class="muted">ккал</small></p></div>
+        </article>
+
+        <form class="card form" action="plan.html" method="post" style="margin-top:20px">
+          <h3>Что было вкусного ещё?</h3>
+          <p class="muted">Добавьте перекус, десерт или любимое блюдо в дневник.</p>
+          <div class="field"><label for="dish">Название блюда</label><input type="text" id="dish" name="dish" placeholder="Например, йогурт с грушей" required></div>
+          <div class="field"><label for="meal-time">Время</label><input type="time" id="meal-time" name="time" value="16:00"></div>
+          <div class="field"><label for="dish-kcal">Калории, ккал</label><input type="number" id="dish-kcal" name="kcal" min="0" placeholder="0" required></div>
+          <button class="btn btn--primary" type="submit">+ Добавить еду</button>
+        </form>
+      </section>
+
+      <aside>
+        <article class="card">
+          <p class="eyebrow">Итого за день</p>
+          <h2>Итого за день</h2>
+          <p class="muted">Дневной ориентир и текущая сумма запланированных блюд.</p>
+          <p class="stat__value">1840 ккал</p>
+          <progress max="1840" value="1350"></progress>
+          <p class="muted">Запланировано 1350 ккал · Осталось 490 ккал</p>
+          <div class="macros">
+            <div class="card"><p class="muted">Белки</p><p class="stat__value">92 г</p><progress max="140" value="92"></progress></div>
+            <div class="card"><p class="muted">Жиры</p><p class="stat__value">61 г</p><progress max="80" value="61"></progress></div>
+            <div class="card"><p class="muted">Углеводы</p><p class="stat__value">210 г</p><progress max="300" value="210"></progress></div>
+          </div>
+          <p class="note">БЖУ указаны как дневные ориентиры, отдельно от суммы калорий блюд.</p>
+        </article>
+        <article class="card" style="margin-top:20px;background:var(--green-soft)">
+          <p class="eyebrow">Инспирация</p>
+          <h3>Больше цвета в вашей тарелке</h3>
+          <p class="muted">Соберите обед, который радует и насыщает надолго.</p>
+          <a class="btn" href="catalog.html">Выбрать рецепт</a>
+        </article>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="container footer">
+    <div class="footer__cols">
+      <section><h4>Продукт</h4><ul><li><a href="index.html">Главная</a></li><li><a href="catalog.html">Каталог</a></li><li><a href="plan.html">План питания</a></li><li><a href="stats.html">Профиль</a></li></ul></section>
+      <section><h4>Компания</h4><ul><li><a href="#">О платформе</a></li><li><a href="#">База знаний</a></li><li><a href="#">Контакты</a></li></ul></section>
+      <section><h4>Сообщения</h4><ul><li><a href="login.html">Войти</a></li><li><a href="plan.html">Начать планирование</a></li></ul></section>
+    </div>
+    <p class="footer__note">Цели и значения приведены для примера. Это не медицинские рекомендации. Прислушивайтесь к себе.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Статистика питания: калории и БЖУ за неделю">
+  <title>Статистика питания — Рацион</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="container header">
+    <a class="logo" href="index.html"><span class="logo__mark"></span>рацион</a>
+    <nav class="nav" aria-label="Основная навигация">
+      <ul>
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="catalog.html">Каталог</a></li>
+        <li><a href="plan.html">План питания</a></li>
+        <li><a href="stats.html" aria-current="page">Статистика</a></li>
+      </ul>
+    </nav>
+    <div class="header__actions"><a class="btn" href="login.html">Михаил Джэкич</a></div>
+  </header>
+
+  <main class="container">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">Питание / Аналитика</p>
+        <h1>Статистика питания</h1>
+        <p class="muted">Анна, это ваша еженедельная сводка по калориям, макронутриентам и соблюдению плана.</p>
+      </div>
+      <form action="stats.html" method="get" class="chips">
+        <input type="radio" name="period" id="p-week" value="week" checked><label for="p-week">Эта неделя</label>
+        <input type="radio" name="period" id="p-month" value="30"><label for="p-month">Последние 30 дней</label>
+      </form>
+    </div>
+
+    <section class="card">
+      <h3>График калорий</h3>
+      <p class="muted">Цель · 2000 ккал</p>
+      <ul class="chart">
+        <li data-kcal="1680"><span style="height:168px"></span>Пн</li>
+        <li data-kcal="1820"><span style="height:182px"></span>Вт</li>
+        <li data-kcal="1760"><span style="height:176px"></span>Ср</li>
+        <li data-kcal="1920"><span style="height:192px"></span>Чт</li>
+        <li data-kcal="1640"><span style="height:164px"></span>Пт</li>
+        <li data-kcal="2080"><span style="height:208px"></span>Сб</li>
+        <li data-kcal="1980"><span style="height:198px"></span>Вс</li>
+      </ul>
+      <p class="muted">Цифры приведены как пример и не рассчитаны из средних БЖУ. Для точной оценки используйте полный дневник питания.</p>
+    </section>
+
+    <section class="stats stats--five" style="margin-top:24px">
+      <article class="card"><p class="muted">Средние калории</p><p class="stat__value">1840 ккал</p><p class="muted">Примерная средняя за неделю</p></article>
+      <article class="card"><p class="muted">Средний белок</p><p class="stat__value">92 г</p><p class="muted">Примерная средняя за неделю</p></article>
+      <article class="card"><p class="muted">Средние углеводы</p><p class="stat__value">300 г</p><p class="muted">Примерная средняя за неделю</p></article>
+      <article class="card"><p class="muted">Средние жиры</p><p class="stat__value">65 г</p><p class="muted">Примерная средняя за неделю</p></article>
+      <article class="card"><p class="muted">Дней выполнено</p><p class="stat__value">4 из 7</p><p class="muted">Примерная оценка соблюдения плана</p></article>
+    </section>
+  </main>
+
+  <footer class="container footer">
+    <div class="footer__cols">
+      <section><h4>Продукт</h4><ul><li><a href="index.html">Главная</a></li><li><a href="catalog.html">Каталог</a></li><li><a href="plan.html">План питания</a></li><li><a href="stats.html">Профиль</a></li></ul></section>
+      <section><h4>Компания</h4><ul><li><a href="#">О платформе</a></li><li><a href="#">База знаний</a></li><li><a href="#">Контакты</a></li></ul></section>
+      <section><h4>Сообщения</h4><ul><li><a href="login.html">Войти</a></li><li><a href="plan.html">Начать планирование</a></li></ul></section>
+    </div>
+    <p class="footer__note">Цели и значения приведены для примера. Это не медицинские рекомендации. Прислушивайтесь к себе.</p>
+  </footer>
+</body>
+</html>

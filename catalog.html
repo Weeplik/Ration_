@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Каталог рецептов Рацион: поиск и фильтры по приёмам пищи">
+  <title>Каталог блюд — Рацион</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="container header">
+    <a class="logo" href="index.html"><span class="logo__mark"></span>рацион</a>
+    <nav class="nav" aria-label="Основная навигация">
+      <ul>
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="catalog.html" aria-current="page">Каталог</a></li>
+        <li><a href="plan.html">План питания</a></li>
+        <li><a href="stats.html">Статистика</a></li>
+      </ul>
+    </nav>
+    <div class="header__actions"><a class="btn" href="login.html">Михаил Джэкич</a></div>
+  </header>
+
+  <main class="container">
+    <div class="section-head">
+      <div><p class="eyebrow">Вдохновение на каждый день</p><h1>Вкусно. Просто. В вашем ритме.</h1><p class="muted">Блюда из обычных продуктов, к которым хочется возвращаться.</p></div>
+      <a class="btn btn--primary" href="#add-recipe">+ Добавить рецепт</a>
+    </div>
+
+    <section class="banner">
+      <div class="banner__content">
+        <p class="eyebrow">Сезонная подборка · 12 рецептов</p>
+        <h2>Тёплая сторона осени</h2>
+        <p>Тыква, пряности и немного уюта в каждой ложке.</p>
+        <a href="#">Смотреть подборку →</a>
+      </div>
+      <img class="banner__img" src="img/%D0%91%D0%B0%D0%BB%D0%B0%D0%BD%D0%B4%D0%B0.png" alt="Миска тёплого супа">
+    </section>
+
+    <form class="form" action="catalog.html" method="get" role="search">
+      <div class="toolbar">
+        <input type="search" name="q" placeholder="Найти рецепт или ингредиент…" aria-label="Поиск рецептов">
+        <select name="sort" aria-label="Сортировка">
+          <option>Сначала популярные</option>
+          <option>Сначала быстрые</option>
+          <option>По калорийности</option>
+        </select>
+        <button class="btn" type="submit">Фильтры</button>
+      </div>
+      <fieldset>
+        <legend>Тип блюда</legend>
+        <div class="chips">
+          <input type="radio" name="type" id="t-all" value="all" checked><label for="t-all">Все блюда</label>
+          <input type="radio" name="type" id="t-b" value="breakfast"><label for="t-b">Завтраки</label>
+          <input type="radio" name="type" id="t-l" value="lunch"><label for="t-l">Обеды</label>
+          <input type="radio" name="type" id="t-d" value="dinner"><label for="t-d">Ужины</label>
+          <input type="radio" name="type" id="t-s" value="snack"><label for="t-s">Перекусы</label>
+          <input type="radio" name="type" id="t-v" value="veg"><label for="t-v">Без мяса</label>
+          <input type="radio" name="type" id="t-q" value="quick"><label for="t-q">До 20 минут</label>
+        </div>
+      </fieldset>
+    </form>
+
+    <div class="section-head"><h3>Все рецепты <span class="muted">24 рецепта</span></h3></div>
+    <section class="recipes">
+      <article class="card recipe"><img class="recipe__img" src="img/Meal%20photography.png" alt="Овсянка с ягодами и бананом"><div class="recipe__body"><span class="recipe__badge">Завтрак</span><h3 class="recipe__title">Овсянка с ягодами и бананом</h3><p class="recipe__meta"><span>10 мин</span><span>320 ккал / порция</span></p><button class="recipe__add" type="button">В план питания <span>+</span></button></div></article>
+      <article class="card recipe"><img class="recipe__img" src="img/Meal%20photography-1.png" alt="Боул с курицей и киноа"><div class="recipe__body"><span class="recipe__badge">Больше белка</span><h3 class="recipe__title">Боул с курицей и киноа</h3><p class="recipe__meta"><span>25 мин</span><span>560 ккал / порция</span></p><button class="recipe__add" type="button">В план питания <span>+</span></button></div></article>
+      <article class="card recipe"><img class="recipe__img" src="img/Meal%20photography-2.png" alt="Лосось с брокколи и рисом"><div class="recipe__body"><span class="recipe__badge">Обед и ужин</span><h3 class="recipe__title">Лосось с брокколи и рисом</h3><p class="recipe__meta"><span>30 мин</span><span>490 ккал / порция</span></p><button class="recipe__add" type="button">В план питания <span>+</span></button></div></article>
+      <article class="card recipe"><img class="recipe__img" src="img/Meal%20photography-3.png" alt="Авокадо-тост с яйцом пашот"><div class="recipe__body"><span class="recipe__badge">Быстро и просто</span><h3 class="recipe__title">Авокадо-тост с яйцом пашот</h3><p class="recipe__meta"><span>15 мин</span><span>345 ккал / порция</span></p><button class="recipe__add" type="button">В план питания <span>+</span></button></div></article>
+      <article class="card recipe"><img class="recipe__img" src="img/Meal%20photography-4.png" alt="Тёплый салат с тыквой и чечевицей"><div class="recipe__body"><span class="recipe__badge">Без мяса</span><h3 class="recipe__title">Тёплый салат с тыквой и чечевицей</h3><p class="recipe__meta"><span>20 мин</span><span>410 ккал / порция</span></p><button class="recipe__add" type="button">В план питания <span>+</span></button></div></article>
+      <article class="card recipe"><img class="recipe__img" src="img/Meal%20photography-5.png" alt="Тыквенный суп с тимьяном"><div class="recipe__body"><span class="recipe__badge">Сезонное</span><h3 class="recipe__title">Тыквенный суп с тимьяном</h3><p class="recipe__meta"><span>35 мин</span><span>285 ккал / порция</span></p><button class="recipe__add" type="button">В план питания <span>+</span></button></div></article>
+    </section>
+    <p class="muted" style="text-align:center;margin-top:24px">Показано 6 из 24 рецептов</p>
+
+    <section id="add-recipe" class="card" style="margin-top:40px">
+      <h2>Добавить рецепт</h2>
+      <form class="form" action="catalog.html" method="post">
+        <div class="field"><label for="r-title">Название блюда</label><input type="text" id="r-title" name="title" required minlength="3" placeholder="Например, гречка с грибами"></div>
+        <div class="field"><label for="r-type">Приём пищи</label>
+          <select id="r-type" name="meal"><option>Завтрак</option><option>Обед</option><option>Ужин</option><option>Перекус</option></select></div>
+        <div class="field"><label for="r-time">Время приготовления, мин</label><input type="number" id="r-time" name="time" min="1" max="240" placeholder="20" required></div>
+        <div class="field"><label for="r-kcal">Калорийность, ккал / порция</label><input type="number" id="r-kcal" name="kcal" min="1" placeholder="350" required></div>
+        <div class="field"><label for="r-desc">Описание</label><textarea id="r-desc" name="desc" rows="3"></textarea></div>
+        <button class="btn btn--primary" type="submit">Сохранить рецепт</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="container footer">
+    <div class="footer__cols">
+      <section><h4>Продукт</h4><ul><li><a href="index.html">Главная</a></li><li><a href="catalog.html">Каталог</a></li><li><a href="plan.html">План питания</a></li><li><a href="stats.html">Профиль</a></li></ul></section>
+      <section><h4>Компания</h4><ul><li><a href="#">О платформе</a></li><li><a href="#">База знаний</a></li><li><a href="#">Контакты</a></li></ul></section>
+      <section><h4>Сообщения</h4><ul><li><a href="login.html">Войти</a></li><li><a href="plan.html">Начать планирование</a></li></ul></section>
+    </div>
+    <p class="footer__note">Цели и значения приведены для примера. Это не медицинские рекомендации. Прислушивайтесь к себе.</p>
+  </footer>
+</body>
+</html>

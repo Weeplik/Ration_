@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Рацион — платформа здорового питания: планируйте рацион и следите за КБЖУ">
+  <title>Главная — Рацион</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="container header">
+    <a class="logo" href="index.html"><span class="logo__mark"></span>рацион</a>
+    <nav class="nav" aria-label="Основная навигация">
+      <ul>
+        <li><a href="index.html" aria-current="page">Главная</a></li>
+        <li><a href="catalog.html">Каталог</a></li>
+        <li><a href="plan.html">План питания</a></li>
+        <li><a href="stats.html">Профиль</a></li>
+      </ul>
+    </nav>
+    <div class="header__actions">
+      <a class="btn" href="login.html">Войти</a>
+      <a class="btn btn--primary" href="plan.html">Начать планирование</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Платформа здорового питания</p>
+        <h1>Управляйте своим здоровым питанием каждый день</h1>
+        <p class="hero__lead">Планируйте рацион, следите за КБЖУ и достигайте своих целей без стресса и лишних ограничений.</p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="plan.html">Начать планирование</a>
+          <a class="btn" href="catalog.html">Посмотреть каталог</a>
+        </div>
+        <ul class="tags"><li>План питания</li><li>КБЖУ</li><li>Рецепты</li></ul>
+      </div>
+      <aside class="hero__visual">
+        <img src="img/Hero%20media.png" alt="Карточка создания плана питания на фоне тыквенного супа">
+      </aside>
+    </section>
+
+    <section class="features" aria-label="Возможности">
+      <article class="card"><img class="feature__icon" src="img/Frame.png" alt=""><h3>Планируйте рацион</h3><p class="muted">Соберите день из любимых блюд и получите понятный план на неделю.</p></article>
+      <article class="card"><img class="feature__icon" src="img/Frame-1.png" alt=""><h3>Следите за КБЖУ</h3><p class="muted">Понимайте, что съедено, и корректируйте цели без лишней нагрузки.</p></article>
+      <article class="card"><img class="feature__icon" src="img/Frame-2.png" alt=""><h3>Достигайте целей</h3><p class="muted">Работайте над результатом без стресса и лишних ограничений.</p></article>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div><p class="eyebrow">Вдохновение на каждый день</p><h2>Вкусно. Просто. В вашем ритме.</h2><p class="muted">Блюда из обычных продуктов, к которым хочется возвращаться.</p></div>
+        <a class="btn" href="catalog.html">Все блюда</a>
+      </div>
+      <div class="recipes">
+        <article class="card recipe"><img class="recipe__img" src="img/Meal%20photography.png" alt="Овсянка с ягодами и бананом"><div class="recipe__body"><span class="recipe__badge">Завтрак</span><h3 class="recipe__title">Овсянка с ягодами и бананом</h3><p class="recipe__meta"><span>10 мин</span><span>320 ккал / порция</span></p></div></article>
+        <article class="card recipe"><img class="recipe__img" src="img/Meal%20photography-1.png" alt="Боул с курицей и киноа"><div class="recipe__body"><span class="recipe__badge">Больше белка</span><h3 class="recipe__title">Боул с курицей и киноа</h3><p class="recipe__meta"><span>25 мин</span><span>560 ккал / порция</span></p></div></article>
+        <article class="card recipe"><img class="recipe__img" src="img/Meal%20photography-2.png" alt="Лосось с брокколи и рисом"><div class="recipe__body"><span class="recipe__badge">Обед и ужин</span><h3 class="recipe__title">Лосось с брокколи и рисом</h3><p class="recipe__meta"><span>30 мин</span><span>490 ккал / порция</span></p></div></article>
+      </div>
+    </section>
+
+    <section class="banner">
+      <div class="banner__content">
+        <p class="eyebrow">Сезонная подборка · 12 рецептов</p>
+        <h2>Тёплая сторона осени</h2>
+        <p>Тыква, пряности и немного уюта в каждой ложке.</p>
+        <a href="catalog.html">Смотреть подборку →</a>
+      </div>
+      <img class="banner__img" src="img/%D0%91%D0%B0%D0%BB%D0%B0%D0%BD%D0%B4%D0%B0.png" alt="Миска тёплого супа">
+    </section>
+
+    <section>
+      <div class="section-head"><h3>Ваш баланс сегодня</h3><a class="muted" href="plan.html">Настроить цели →</a></div>
+      <div class="stats">
+        <article class="card"><p class="muted">Энергия за день</p><p class="stat__value">1 240 <small class="muted">/ 1 900 ккал</small></p><progress max="1900" value="1240"></progress></article>
+        <article class="card"><p class="muted">Белки</p><p class="stat__value">68 <small class="muted">/ 95 г</small></p><progress max="95" value="68"></progress></article>
+        <article class="card"><p class="muted">Жиры</p><p class="stat__value">44 <small class="muted">/ 65 г</small></p><progress max="65" value="44"></progress></article>
+        <article class="card"><p class="muted">Углеводы</p><p class="stat__value">143 <small class="muted">/ 235 г</small></p><progress max="235" value="143"></progress></article>
+      </div>
+    </section>
+
+    <section class="section-head"><h3>Сегодня в дневнике</h3></section>
+    <section class="two-col">
+      <div>
+        <div class="meal"><div><p class="muted">Завтрак · 08:30</p><strong>Овсянка с ягодами и бананом</strong></div><p class="meal__kcal">380 <small class="muted">ккал</small></p></div>
+        <div class="meal"><div><p class="muted">Обед · 13:00</p><strong>Боул с курицей и киноа</strong></div><p class="meal__kcal">560 <small class="muted">ккал</small></p></div>
+        <div class="meal"><div><p class="muted">Перекус · 16:00</p><strong>Йогурт, груша и миндаль</strong></div><p class="meal__kcal">300 <small class="muted">ккал</small></p></div>
+        <form class="card form" action="plan.html" method="post" style="margin-top:16px">
+          <div class="field"><label for="food">Что было вкусного ещё?</label><input type="text" id="food" name="food" placeholder="Название блюда" required></div>
+          <button class="btn btn--primary" type="submit">+ Добавить еду</button>
+        </form>
+      </div>
+      <aside class="card"><p class="eyebrow">На вечер</p><h3>Лосось с брокколи и бурым рисом</h3><p class="muted">30 минут · 490 ккал / порция</p><a class="btn" href="catalog.html">Открыть рецепт</a></aside>
+    </section>
+  </main>
+
+  <footer class="container footer">
+    <div><h3>рацион</h3><p class="muted">Платформа здорового питания, которая помогает планировать рацион, следить за КБЖУ и целей без лишнего стресса.</p></div>
+    <div class="footer__cols">
+      <section><h4>Продукт</h4><ul><li><a href="index.html">Главная</a></li><li><a href="catalog.html">Каталог</a></li><li><a href="plan.html">План питания</a></li><li><a href="stats.html">Профиль</a></li></ul></section>
+      <section><h4>Компания</h4><ul><li><a href="#">О платформе</a></li><li><a href="#">База знаний</a></li><li><a href="#">Контакты</a></li></ul></section>
+      <section><h4>Сообщения</h4><ul><li><a href="login.html">Войти</a></li><li><a href="plan.html">Начать планирование</a></li></ul></section>
+    </div>
+  </footer>
+</body>
+</html>

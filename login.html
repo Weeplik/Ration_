@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Рацион — вход и создание профиля по номеру телефона">
+  <title>Вход — Рацион</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="container header">
+    <a class="logo" href="index.html"><span class="logo__mark"></span>рацион</a>
+    <nav class="nav" aria-label="Основная навигация">
+      <ul>
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="plan.html">План питания</a></li>
+        <li><a href="stats.html">Профиль</a></li>
+        <li><a href="catalog.html">Каталог</a></li>
+      </ul>
+    </nav>
+    <div class="header__actions">
+      <a class="btn" href="login.html">Войти</a>
+      <a class="btn btn--primary" href="plan.html">Начать планирование</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="auth">
+      <p class="eyebrow">Вход и создание профиля</p>
+      <h1>Добро пожаловать в рацион</h1>
+      <p class="muted">Введите номер телефона, чтобы войти в существующий профиль или создать новый. Мы отправим вам код подтверждения.</p>
+
+      <form class="card auth__card form" action="plan.html" method="post" novalidate>
+        <div class="steps">
+          <span>ШАГ 1 ИЗ 2</span>
+          <div class="steps__bar" aria-hidden="true"><span></span><span></span></div>
+        </div>
+        <fieldset class="form">
+          <legend><h2>Ваш номер телефона</h2></legend>
+          <p class="muted">Новым пользователям профиль создастся автоматически.</p>
+          <div class="field">
+            <label for="phone">Номер телефона</label>
+            <div class="phone">
+              <select name="country" aria-label="Код страны">
+                <option value="+7" selected>🇷🇺 +7</option>
+                <option value="+375">🇧🇾 +375</option>
+                <option value="+7kz">🇰🇿 +7</option>
+              </select>
+              <input type="tel" id="phone" name="phone" placeholder="000 000-00-00"
+                     pattern="[0-9 \-]{10,13}" required autocomplete="tel-national">
+            </div>
+          </div>
+        </fieldset>
+        <button class="btn btn--primary btn--block" type="submit">Получить код</button>
+        <label class="check">
+          <input type="checkbox" name="agree" required>
+          <span>Нажимая на кнопку, я соглашаюсь <a href="#">с правилами пользования сервисом «Рацион» и политикой конфиденциальности.</a></span>
+        </label>
+      </form>
+    </section>
+  </main>
+
+  <footer class="container footer">
+    <div class="footer__cols">
+      <section><h4>Продукт</h4><ul><li><a href="index.html">Главная</a></li><li><a href="catalog.html">Каталог</a></li><li><a href="plan.html">План питания</a></li><li><a href="stats.html">Профиль</a></li></ul></section>
+      <section><h4>Компания</h4><ul><li><a href="#">О платформе</a></li><li><a href="#">База знаний</a></li><li><a href="#">Контакты</a></li></ul></section>
+      <section><h4>Сообщения</h4><ul><li><a href="login.html">Войти</a></li><li><a href="plan.html">Начать планирование</a></li></ul></section>
+    </div>
+    <p class="footer__note">Цели и значения приведены для примера. Это не медицинские рекомендации. Прислушивайтесь к себе.</p>
+  </footer>
+</body>
+</html>
