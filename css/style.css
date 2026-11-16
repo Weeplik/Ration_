@@ -179,10 +179,6 @@ progress::-moz-progress-bar { background: var(--green); }
   .footer { grid-template-columns: 1fr; }
 }
 
-/* =========================================================
-   ===== CSS-анимации (лабораторная работа №5) =====
-   ========================================================= */
-
 /* --- Ключевые кадры --- */
 @keyframes fadeIn  { from { opacity: 0; } to { opacity: 1; } }
 @keyframes fadeUp  { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: none; } }
@@ -267,8 +263,3 @@ progress { transform-origin: left center; animation: fillBar 1.2s .3s ease-out b
 .auth__card { animation: popIn .6s .2s ease-out backwards; }
 .steps__bar span:first-child { animation: blink 1.6s ease-in-out infinite; }
 .btn--block { animation: pulse 2s 1s infinite; }
-
-/* --- Отключение анимаций для тех, кто этого просит в настройках ОС --- */
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after { animation: none !important; transition: none !important; }
-}
