@@ -178,3 +178,97 @@ progress::-moz-progress-bar { background: var(--green); }
 @media (max-width: 560px) {
   .footer { grid-template-columns: 1fr; }
 }
+
+/* =========================================================
+   ===== CSS-анимации (лабораторная работа №5) =====
+   ========================================================= */
+
+/* --- Ключевые кадры --- */
+@keyframes fadeIn  { from { opacity: 0; } to { opacity: 1; } }
+@keyframes fadeUp  { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: none; } }
+@keyframes slideIn { from { opacity: 0; transform: translateX(-30px); } to { opacity: 1; transform: none; } }
+@keyframes popIn   { from { opacity: 0; transform: scale(.9); } to { opacity: 1; transform: scale(1); } }
+@keyframes float   { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+@keyframes growBar { from { transform: scaleY(0); } to { transform: scaleY(1); } }
+@keyframes fillBar { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+@keyframes blink   { 0%, 100% { opacity: 1; } 50% { opacity: .35; } }
+@keyframes pulse   { 0%   { box-shadow: 0 0 0 0 rgba(59,107,84,.45); }
+                     70%  { box-shadow: 0 0 0 14px rgba(59,107,84,0); }
+                     100% { box-shadow: 0 0 0 0 rgba(59,107,84,0); } }
+
+/* --- Общие: шапка, логотип, кнопки, ссылки (transition) --- */
+.header { animation: fadeIn .6s ease-out backwards; }
+.logo__mark { transition: transform .4s ease; }
+.logo:hover .logo__mark { transform: rotate(-20deg) scale(1.1); }
+.nav a, .btn, .chips label, .recipe__add { transition: background-color .25s, color .25s, border-color .25s, transform .25s, box-shadow .25s; }
+.btn:hover { transform: translateY(-2px); box-shadow: 0 6px 14px rgba(41,80,60,.15); }
+.btn:active { transform: translateY(0); }
+
+/* --- Главная: hero, теги, карточки возможностей --- */
+.hero > div { animation: slideIn .8s ease-out backwards; }
+.hero__visual { animation: fadeUp .8s .2s ease-out backwards, float 5s 1.2s ease-in-out infinite; }
+.tags li { animation: popIn .4s ease-out backwards; }
+.tags li:nth-child(1) { animation-delay: .6s; }
+.tags li:nth-child(2) { animation-delay: .75s; }
+.tags li:nth-child(3) { animation-delay: .9s; }
+.features .card { animation: fadeUp .7s ease-out backwards; transition: transform .3s, box-shadow .3s; }
+.features .card:nth-child(2) { animation-delay: .15s; }
+.features .card:nth-child(3) { animation-delay: .3s; }
+.features .card:hover { transform: translateY(-6px); box-shadow: 0 12px 24px rgba(41,80,60,.12); }
+
+/* --- Карточки рецептов: появление по очереди + наведение --- */
+.recipe { animation: fadeUp .6s ease-out backwards; transition: transform .3s, box-shadow .3s; }
+.recipe:nth-child(2) { animation-delay: .1s; }
+.recipe:nth-child(3) { animation-delay: .2s; }
+.recipe:nth-child(4) { animation-delay: .3s; }
+.recipe:nth-child(5) { animation-delay: .4s; }
+.recipe:nth-child(6) { animation-delay: .5s; }
+.recipe:hover { transform: translateY(-6px); box-shadow: 0 14px 28px rgba(41,80,60,.15); }
+.recipe__img { transition: transform .5s ease; }
+.recipe:hover .recipe__img { transform: scale(1.07); }
+.recipe__add span { display: inline-block; transition: transform .3s; }
+.recipe__add:hover span { transform: rotate(90deg); }
+
+/* --- Баннер --- */
+.banner { animation: fadeIn 1s ease-out backwards; }
+.banner__img { transition: transform .4s ease; }
+.banner:hover .banner__img { transform: scale(1.04) rotate(-1deg); }
+
+/* --- Дневник и план питания: приёмы пищи выезжают слева --- */
+.meal { animation: slideIn .6s ease-out backwards; transition: transform .25s; }
+.meal:nth-of-type(2) { animation-delay: .15s; }
+.meal:nth-of-type(3) { animation-delay: .3s; }
+.meal:hover { transform: translateX(6px); }
+.macros .card { animation: popIn .5s ease-out backwards; }
+.macros .card:nth-child(2) { animation-delay: .15s; }
+.macros .card:nth-child(3) { animation-delay: .3s; }
+
+/* --- Прогресс-бары заполняются слева направо --- */
+progress { transform-origin: left center; animation: fillBar 1.2s .3s ease-out backwards; }
+
+/* --- Статистика: столбцы графика растут снизу вверх --- */
+.chart li span { transform-origin: bottom; animation: growBar .9s ease-out backwards; }
+.chart li:nth-child(2) span { animation-delay: .1s; }
+.chart li:nth-child(3) span { animation-delay: .2s; }
+.chart li:nth-child(4) span { animation-delay: .3s; }
+.chart li:nth-child(5) span { animation-delay: .4s; }
+.chart li:nth-child(6) span { animation-delay: .5s; }
+.chart li:nth-child(7) span { animation-delay: .6s; }
+.chart li::before { animation: fadeIn .5s 1.2s backwards; }
+.chart li span:hover { filter: brightness(1.2); }
+.stats .card { animation: fadeUp .6s ease-out backwards; }
+.stats .card:nth-child(2) { animation-delay: .1s; }
+.stats .card:nth-child(3) { animation-delay: .2s; }
+.stats .card:nth-child(4) { animation-delay: .3s; }
+.stats .card:nth-child(5) { animation-delay: .4s; }
+
+/* --- Авторизация: карточка «всплывает», шаг мигает, кнопка пульсирует --- */
+.auth > h1, .auth > p { animation: fadeUp .6s ease-out backwards; }
+.auth__card { animation: popIn .6s .2s ease-out backwards; }
+.steps__bar span:first-child { animation: blink 1.6s ease-in-out infinite; }
+.btn--block { animation: pulse 2s 1s infinite; }
+
+/* --- Отключение анимаций для тех, кто этого просит в настройках ОС --- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
