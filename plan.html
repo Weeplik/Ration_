@@ -5,35 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="План питания на день: приёмы пищи, калории и БЖУ">
   <title>План питания — Рацион</title>
+  <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header class="container header">
+  <header class="site-container header">
     <a class="logo" href="index.html"><span class="logo__mark"></span>рацион</a>
     <nav class="nav" aria-label="Основная навигация">
       <ul>
-        <li><a href="index.html">Главная</a></li>
-        <li><a href="catalog.html">Каталог</a></li>
-        <li><a href="plan.html" aria-current="page">План питания</a></li>
-        <li><a href="stats.html">Статистика</a></li>
+        <li><a class="nav-link" href="index.html">Главная</a></li>
+        <li><a class="nav-link" href="catalog.html">Каталог</a></li>
+        <li><a class="nav-link" href="plan.html" aria-current="page">План питания</a></li>
+        <li><a class="nav-link" href="stats.html">Статистика</a></li>
       </ul>
     </nav>
     <div class="header__actions"><a class="btn" href="login.html">Михаил Джэкич</a></div>
   </header>
 
-  <main class="container">
+  <main class="site-container">
     <p class="eyebrow">План питания</p>
     <h1>Ваш дневной рацион</h1>
     <p class="muted">План питания на 14 сентября. Сбалансированные блюда, удобный формат и понятные цели для дня.</p>
 
     <form class="date-nav" action="plan.html" method="get">
       <button class="btn" type="submit" name="date" value="2026-09-13">← 13 сентября</button>
-      <div class="field"><label for="date" class="muted">Дата плана</label><input type="date" id="date" name="date" value="2026-09-14"></div>
+      <div class="field"><label for="date" class="muted">Дата плана</label><input class="form-control" type="date" id="date" name="date" value="2026-09-14"></div>
       <button class="btn" type="submit" name="date" value="today">Сегодня →</button>
     </form>
 
-    <div class="two-col">
-      <section>
+    <div class="row g-4 g-lg-5">
+      <section class="col-lg-6">
         <article class="card">
           <p class="eyebrow">Рацион на день</p>
           <h2>Рацион на день</h2>
@@ -46,14 +47,14 @@
         <form class="card form" action="plan.html" method="post" style="margin-top:20px">
           <h3>Что было вкусного ещё?</h3>
           <p class="muted">Добавьте перекус, десерт или любимое блюдо в дневник.</p>
-          <div class="field"><label for="dish">Название блюда</label><input type="text" id="dish" name="dish" placeholder="Например, йогурт с грушей" required></div>
-          <div class="field"><label for="meal-time">Время</label><input type="time" id="meal-time" name="time" value="16:00"></div>
-          <div class="field"><label for="dish-kcal">Калории, ккал</label><input type="number" id="dish-kcal" name="kcal" min="0" placeholder="0" required></div>
+          <div class="field"><label for="dish">Название блюда</label><input class="form-control" type="text" id="dish" name="dish" placeholder="Например, йогурт с грушей" required></div>
+          <div class="field"><label for="meal-time">Время</label><input class="form-control" type="time" id="meal-time" name="time" value="16:00"></div>
+          <div class="field"><label for="dish-kcal">Калории, ккал</label><input class="form-control" type="number" id="dish-kcal" name="kcal" min="0" placeholder="0" required></div>
           <button class="btn btn--primary" type="submit">+ Добавить еду</button>
         </form>
       </section>
 
-      <aside>
+      <aside class="col-lg-6">
         <article class="card">
           <p class="eyebrow">Итого за день</p>
           <h2>Итого за день</h2>
@@ -78,7 +79,7 @@
     </div>
   </main>
 
-  <footer class="container footer">
+  <footer class="site-container footer">
     <div class="footer__cols">
       <section><h4>Продукт</h4><ul><li><a href="index.html">Главная</a></li><li><a href="catalog.html">Каталог</a></li><li><a href="plan.html">План питания</a></li><li><a href="stats.html">Профиль</a></li></ul></section>
       <section><h4>Компания</h4><ul><li><a href="#">О платформе</a></li><li><a href="#">База знаний</a></li><li><a href="#">Контакты</a></li></ul></section>
