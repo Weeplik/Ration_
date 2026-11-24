@@ -7,21 +7,28 @@
   <title>Главная — Рацион</title>
   <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
   <link rel="stylesheet" href="css/style.css">
+  <script src="js/vendor/bootstrap.min.js" defer></script>
 </head>
 <body>
-  <header class="site-container header">
+  <header class="site-container header navbar navbar-expand-lg">
     <a class="logo" href="index.html"><span class="logo__mark"></span>рацион</a>
-    <nav class="nav" aria-label="Основная навигация">
-      <ul>
-        <li><a class="nav-link" href="index.html" aria-current="page">Главная</a></li>
-        <li><a class="nav-link" href="catalog.html">Каталог</a></li>
-        <li><a class="nav-link" href="plan.html">План питания</a></li>
-        <li><a class="nav-link" href="stats.html">Профиль</a></li>
-      </ul>
-    </nav>
-    <div class="header__actions">
-      <a class="btn" href="login.html">Войти</a>
-      <a class="btn btn--primary" href="plan.html">Начать планирование</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#site-navigation"
+            aria-controls="site-navigation" aria-expanded="false" aria-label="Меню сайта">
+      <span class="navbar-toggler-icon" aria-hidden="true"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="site-navigation">
+      <nav class="nav" aria-label="Основная навигация">
+        <ul>
+          <li><a class="nav-link" href="index.html" aria-current="page">Главная</a></li>
+          <li><a class="nav-link" href="catalog.html">Каталог</a></li>
+          <li><a class="nav-link" href="plan.html">План питания</a></li>
+          <li><a class="nav-link" href="stats.html">Профиль</a></li>
+        </ul>
+      </nav>
+      <div class="header__actions">
+        <a class="btn" href="login.html">Войти</a>
+        <a class="btn btn--primary" href="plan.html">Начать планирование</a>
+      </div>
     </div>
   </header>
 
@@ -47,7 +54,7 @@
     </section>
 
     <section class="features" aria-label="Возможности">
-      <div class="row row-cols-1 row-cols-lg-3 g-4">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-3 g-lg-4">
         <div class="col"><article class="card h-100"><img class="feature__icon" src="img/Frame.png" alt=""><h3>Планируйте рацион</h3><p class="muted">Соберите день из любимых блюд и получите понятный план на неделю.</p></article></div>
         <div class="col"><article class="card h-100"><img class="feature__icon" src="img/Frame-1.png" alt=""><h3>Следите за КБЖУ</h3><p class="muted">Понимайте, что съедено, и корректируйте цели без лишней нагрузки.</p></article></div>
         <div class="col"><article class="card h-100"><img class="feature__icon" src="img/Frame-2.png" alt=""><h3>Достигайте целей</h3><p class="muted">Работайте над результатом без стресса и лишних ограничений.</p></article></div>
@@ -60,7 +67,7 @@
         <a class="btn" href="catalog.html">Все блюда</a>
       </div>
       <div class="recipes">
-        <div class="row row-cols-1 row-cols-lg-3 g-4">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-3 g-lg-4">
           <div class="col"><article class="card h-100 recipe"><img class="recipe__img" src="img/Meal%20photography.png" alt="Овсянка с ягодами и бананом"><div class="recipe__body"><span class="recipe__badge">Завтрак</span><h3 class="recipe__title">Овсянка с ягодами и бананом</h3><p class="recipe__meta"><span>10 мин</span><span>320 ккал / порция</span></p></div></article></div>
           <div class="col"><article class="card h-100 recipe"><img class="recipe__img" src="img/Meal%20photography-1.png" alt="Боул с курицей и киноа"><div class="recipe__body"><span class="recipe__badge">Больше белка</span><h3 class="recipe__title">Боул с курицей и киноа</h3><p class="recipe__meta"><span>25 мин</span><span>560 ккал / порция</span></p></div></article></div>
           <div class="col"><article class="card h-100 recipe"><img class="recipe__img" src="img/Meal%20photography-2.png" alt="Лосось с брокколи и рисом"><div class="recipe__body"><span class="recipe__badge">Обед и ужин</span><h3 class="recipe__title">Лосось с брокколи и рисом</h3><p class="recipe__meta"><span>30 мин</span><span>490 ккал / порция</span></p></div></article></div>
@@ -81,7 +88,7 @@
     <section>
       <div class="section-head"><h3>Ваш баланс сегодня</h3><a class="muted" href="plan.html">Настроить цели →</a></div>
       <div class="stats">
-        <div class="row row-cols-1 row-cols-lg-4 g-4">
+        <div class="row row-cols-2 row-cols-lg-4 g-3 g-lg-4">
           <div class="col"><article class="card h-100"><p class="muted">Энергия за день</p><p class="stat__value">1 240 <small class="muted">/ 1 900 ккал</small></p><progress max="1900" value="1240"></progress></article></div>
           <div class="col"><article class="card h-100"><p class="muted">Белки</p><p class="stat__value">68 <small class="muted">/ 95 г</small></p><progress max="95" value="68"></progress></article></div>
           <div class="col"><article class="card h-100"><p class="muted">Жиры</p><p class="stat__value">44 <small class="muted">/ 65 г</small></p><progress max="65" value="44"></progress></article></div>

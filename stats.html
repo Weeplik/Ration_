@@ -7,19 +7,26 @@
   <title>Статистика питания — Рацион</title>
   <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
   <link rel="stylesheet" href="css/style.css">
+  <script src="js/vendor/bootstrap.min.js" defer></script>
 </head>
 <body>
-  <header class="site-container header">
+  <header class="site-container header navbar navbar-expand-lg">
     <a class="logo" href="index.html"><span class="logo__mark"></span>рацион</a>
-    <nav class="nav" aria-label="Основная навигация">
-      <ul>
-        <li><a class="nav-link" href="index.html">Главная</a></li>
-        <li><a class="nav-link" href="catalog.html">Каталог</a></li>
-        <li><a class="nav-link" href="plan.html">План питания</a></li>
-        <li><a class="nav-link" href="stats.html" aria-current="page">Статистика</a></li>
-      </ul>
-    </nav>
-    <div class="header__actions"><a class="btn" href="login.html">Михаил Джэкич</a></div>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#site-navigation"
+            aria-controls="site-navigation" aria-expanded="false" aria-label="Меню сайта">
+      <span class="navbar-toggler-icon" aria-hidden="true"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="site-navigation">
+      <nav class="nav" aria-label="Основная навигация">
+        <ul>
+          <li><a class="nav-link" href="index.html">Главная</a></li>
+          <li><a class="nav-link" href="catalog.html">Каталог</a></li>
+          <li><a class="nav-link" href="plan.html">План питания</a></li>
+          <li><a class="nav-link" href="stats.html" aria-current="page">Статистика</a></li>
+        </ul>
+      </nav>
+      <div class="header__actions"><a class="btn" href="login.html">Михаил Джэкич</a></div>
+    </div>
   </header>
 
   <main class="site-container">
@@ -51,7 +58,7 @@
     </section>
 
     <section class="stats stats--five" style="margin-top:24px">
-      <div class="row row-cols-1 row-cols-lg-3 row-cols-xl-5 g-4">
+      <div class="row row-cols-2 row-cols-md-3 row-cols-xl-5 g-3 g-lg-4">
         <div class="col"><article class="card h-100"><p class="muted">Средние калории</p><p class="stat__value">1840 ккал</p><p class="muted">Примерная средняя за неделю</p></article></div>
         <div class="col"><article class="card h-100"><p class="muted">Средний белок</p><p class="stat__value">92 г</p><p class="muted">Примерная средняя за неделю</p></article></div>
         <div class="col"><article class="card h-100"><p class="muted">Средние углеводы</p><p class="stat__value">300 г</p><p class="muted">Примерная средняя за неделю</p></article></div>

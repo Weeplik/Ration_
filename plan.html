@@ -7,19 +7,26 @@
   <title>План питания — Рацион</title>
   <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
   <link rel="stylesheet" href="css/style.css">
+  <script src="js/vendor/bootstrap.min.js" defer></script>
 </head>
 <body>
-  <header class="site-container header">
+  <header class="site-container header navbar navbar-expand-lg">
     <a class="logo" href="index.html"><span class="logo__mark"></span>рацион</a>
-    <nav class="nav" aria-label="Основная навигация">
-      <ul>
-        <li><a class="nav-link" href="index.html">Главная</a></li>
-        <li><a class="nav-link" href="catalog.html">Каталог</a></li>
-        <li><a class="nav-link" href="plan.html" aria-current="page">План питания</a></li>
-        <li><a class="nav-link" href="stats.html">Статистика</a></li>
-      </ul>
-    </nav>
-    <div class="header__actions"><a class="btn" href="login.html">Михаил Джэкич</a></div>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#site-navigation"
+            aria-controls="site-navigation" aria-expanded="false" aria-label="Меню сайта">
+      <span class="navbar-toggler-icon" aria-hidden="true"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="site-navigation">
+      <nav class="nav" aria-label="Основная навигация">
+        <ul>
+          <li><a class="nav-link" href="index.html">Главная</a></li>
+          <li><a class="nav-link" href="catalog.html">Каталог</a></li>
+          <li><a class="nav-link" href="plan.html" aria-current="page">План питания</a></li>
+          <li><a class="nav-link" href="stats.html">Статистика</a></li>
+        </ul>
+      </nav>
+      <div class="header__actions"><a class="btn" href="login.html">Михаил Джэкич</a></div>
+    </div>
   </header>
 
   <main class="site-container">

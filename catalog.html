@@ -7,19 +7,26 @@
   <title>Каталог блюд — Рацион</title>
   <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
   <link rel="stylesheet" href="css/style.css">
+  <script src="js/vendor/bootstrap.min.js" defer></script>
 </head>
 <body>
-  <header class="site-container header">
+  <header class="site-container header navbar navbar-expand-lg">
     <a class="logo" href="index.html"><span class="logo__mark"></span>рацион</a>
-    <nav class="nav" aria-label="Основная навигация">
-      <ul>
-        <li><a class="nav-link" href="index.html">Главная</a></li>
-        <li><a class="nav-link" href="catalog.html" aria-current="page">Каталог</a></li>
-        <li><a class="nav-link" href="plan.html">План питания</a></li>
-        <li><a class="nav-link" href="stats.html">Статистика</a></li>
-      </ul>
-    </nav>
-    <div class="header__actions"><a class="btn" href="login.html">Михаил Джэкич</a></div>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#site-navigation"
+            aria-controls="site-navigation" aria-expanded="false" aria-label="Меню сайта">
+      <span class="navbar-toggler-icon" aria-hidden="true"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="site-navigation">
+      <nav class="nav" aria-label="Основная навигация">
+        <ul>
+          <li><a class="nav-link" href="index.html">Главная</a></li>
+          <li><a class="nav-link" href="catalog.html" aria-current="page">Каталог</a></li>
+          <li><a class="nav-link" href="plan.html">План питания</a></li>
+          <li><a class="nav-link" href="stats.html">Статистика</a></li>
+        </ul>
+      </nav>
+      <div class="header__actions"><a class="btn" href="login.html">Михаил Джэкич</a></div>
+    </div>
   </header>
 
   <main class="site-container">
@@ -64,7 +71,7 @@
 
     <div class="section-head"><h3>Все рецепты <span class="muted">24 рецепта</span></h3></div>
     <section class="recipes">
-      <div class="row row-cols-1 row-cols-lg-3 g-4">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-3 g-lg-4">
         <div class="col"><article class="card h-100 recipe"><img class="recipe__img" src="img/Meal%20photography.png" alt="Овсянка с ягодами и бананом"><div class="recipe__body"><span class="recipe__badge">Завтрак</span><h3 class="recipe__title">Овсянка с ягодами и бананом</h3><p class="recipe__meta"><span>10 мин</span><span>320 ккал / порция</span></p><button class="recipe__add" type="button">В план питания <span>+</span></button></div></article></div>
         <div class="col"><article class="card h-100 recipe"><img class="recipe__img" src="img/Meal%20photography-1.png" alt="Боул с курицей и киноа"><div class="recipe__body"><span class="recipe__badge">Больше белка</span><h3 class="recipe__title">Боул с курицей и киноа</h3><p class="recipe__meta"><span>25 мин</span><span>560 ккал / порция</span></p><button class="recipe__add" type="button">В план питания <span>+</span></button></div></article></div>
         <div class="col"><article class="card h-100 recipe"><img class="recipe__img" src="img/Meal%20photography-2.png" alt="Лосось с брокколи и рисом"><div class="recipe__body"><span class="recipe__badge">Обед и ужин</span><h3 class="recipe__title">Лосось с брокколи и рисом</h3><p class="recipe__meta"><span>30 мин</span><span>490 ккал / порция</span></p><button class="recipe__add" type="button">В план питания <span>+</span></button></div></article></div>
